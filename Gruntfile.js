@@ -8,7 +8,23 @@ module.exports = function (grunt) {
         less: {
             development: {
                 options: {
-                    compress: false
+                    compress: false,
+                    ieCompat: true
+                },
+                files: {
+                     "dist/underpants/latest.css": ["lib/underpants/reset.less", "lib/underpants/main.less"],
+
+                     "dist/tshirt/latest.css": ["lib/tshirt/layout.less", "lib/tshirt/navigation.less", "lib/tshirt/button.less"],
+
+                     "dist/outfit/latest.css": ["dist/underpants/latest.min.css", "dist/tshirt/latest.min.css"]
+
+                }
+            },
+            production: {
+                options: {
+                    compress: true,
+                    cleancss: true,
+                    report: "min"
                 },
                 files: {
                      "dist/underpants/latest.min.css": ["lib/underpants/reset.less", "lib/underpants/main.less"],

@@ -1,0 +1,131 @@
+/**
+ * Container
+ * Site-wide container governing the width of the overall site.
+ */
+.gmt-container {
+  margin: 0 auto;
+  width: 960px;
+}
+/**
+ * Section
+ * Thematic grouping of content, typically with a heading.
+ */
+section {
+  background-color: #fff;
+  padding: 40px 0;
+  width: 100%;
+}
+section + section {
+  border-top: 1px solid #ddd;
+}
+/**
+ * Content
+ * The content area within each section.
+ */
+.gmt-content {
+  margin: 0 auto;
+  width: 780px;
+}
+.gmt-content .gmt-span:first-child,
+.gmt-content .gmt-span-12:first-child,
+.gmt-content .gmt-span-11:first-child,
+.gmt-content .gmt-span-10:first-child,
+.gmt-content .gmt-span-9:first-child,
+.gmt-content .gmt-span-8:first-child,
+.gmt-content .gmt-span-7:first-child,
+.gmt-content .gmt-span-6:first-child,
+.gmt-content .gmt-span-5:first-child,
+.gmt-content .gmt-span-4:first-child,
+.gmt-content .gmt-span-3:first-child,
+.gmt-content .gmt-span-2:first-child,
+.gmt-content .gmt-span-1:first-child {
+  margin-left: 0;
+}
+.gmt-content .gmt-span:last-child,
+.gmt-content .gmt-span-12:last-child,
+.gmt-content .gmt-span-11:last-child,
+.gmt-content .gmt-span-10:last-child,
+.gmt-content .gmt-span-9:last-child,
+.gmt-content .gmt-span-8:last-child,
+.gmt-content .gmt-span-7:last-child,
+.gmt-content .gmt-span-6:last-child,
+.gmt-content .gmt-span-5:last-child,
+.gmt-content .gmt-span-4:last-child,
+.gmt-content .gmt-span-3:last-child,
+.gmt-content .gmt-span-2:last-child,
+.gmt-content .gmt-span-1:last-child {
+  margin-right: 0;
+}
+/**
+ * Span parts for dynamic widths
+ */
+.gmt-span,
+.gmt-span-12,
+.gmt-span-11,
+.gmt-span-10,
+.gmt-span-9,
+.gmt-span-8,
+.gmt-span-7,
+.gmt-span-6,
+.gmt-span-5,
+.gmt-span-4,
+.gmt-span-3,
+.gmt-span-2,
+.gmt-span-1 {
+  background-color: #006;
+  color: #fff;
+  display: inline-block;
+  margin: 8px 0;
+  margin-left: -4px;
+  margin-right: 20px;
+  padding: 6px 0;
+  text-align: center;
+  vertical-align: top;
+}
+.gmt-span-12 {
+  width: 780px;
+}
+.gmt-span-11 {
+  width: 713.3333333333334px;
+}
+.gmt-span-10 {
+  width: 646.6666666666667px;
+}
+.gmt-span-9 {
+  width: 580px;
+}
+.gmt-span-8 {
+  width: 513.3333333333334px;
+}
+.gmt-span-7 {
+  width: 446.6666666666667px;
+}
+.gmt-span-6 {
+  width: 380px;
+}
+.gmt-span-5 {
+  width: 313.33333333333337px;
+}
+.gmt-span-4 {
+  width: 246.66666666666669px;
+}
+.gmt-span-3 {
+  width: 180px;
+}
+.gmt-span-2 {
+  width: 113.33333333333334px;
+}
+.gmt-span-1 {
+  width: 46.66666666666667px;
+}
+/**
+ * Footer
+ */
+footer {
+  background-color: #222222;
+  color: #fff;
+  margin: 0;
+  padding: 25px 20px 80px;
+}
+
+
