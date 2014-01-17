@@ -1,2 +1,235 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,900);@import url(http://fonts.googleapis.com/css?family=Ruda:400,900);html{font-size:100%}body{background-color:#f4f4f4;color:#333;font-family:arial,helvetica,sans-serif;font-size:14px;font-weight:400}a:link,a:visited{color:#4690e0;text-decoration:none}a:active,a:hover{color:#4690e0;text-decoration:underline}p{color:#222;font-family:"Ruda",sans-serif;font-size:14px;font-weight:400;line-height:1.6em;margin:1em}h1{color:#222;font-family:"Ruda",sans-serif;font-size:54px;font-weight:900;margin-bottom:.6em;text-transform:uppercase}h2{color:#222;font-family:"Ruda",sans-serif;font-size:38px;font-weight:900;margin-bottom:.6em;text-transform:uppercase}h3{color:#222;font-family:"Ruda",sans-serif;font-size:32px;font-weight:900;margin-bottom:.6em;text-transform:uppercase}h4{color:#222;font-family:"Ruda",sans-serif;font-size:26px;font-weight:900;margin-bottom:.6em;text-transform:uppercase}h5{color:#222;font-family:"Ruda",sans-serif;font-size:20px;font-weight:900;margin-bottom:.6em;text-transform:uppercase}h6{color:#222;font-family:"Ruda",sans-serif;font-size:14px;font-weight:900;margin-bottom:.6em;text-transform:uppercase}hgroup{margin:10px 0}ul,ol{padding-left:2.0em}ul li,ol li{margin:.4em}code{background-color:#eaeaea;border:1px solid #ccc;display:inline-block;font-family:monospace;padding:0 .6em;vertical-align:middle;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}em{font-style:italic}strong{font-weight:900}section{margin-bottom:3.0em}
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,900);
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,900);
+html {
+  font-size: 100%;
+}
+body {
+  background-color: #f4f4f4;
+  color: #333333;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+a:link,
+a:visited {
+  color: #4690e0;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  color: #4690e0;
+  text-decoration: underline;
+}
+p {
+  color: #222222;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin: 1em;
+}
+h1 {
+  color: #222222;
+  font-family: "Ruda", sans-serif;
+  font-size: 54px;
+  font-weight: 900;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+}
+h2 {
+  color: #222222;
+  font-family: "Ruda", sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+}
+h3 {
+  color: #222222;
+  font-family: "Ruda", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+}
+h4 {
+  color: #222222;
+  font-family: "Ruda", sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+}
+h5 {
+  color: #222222;
+  font-family: "Ruda", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+}
+h6 {
+  color: #222222;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+}
+hgroup {
+  margin: 10px 0;
+}
+ul,
+ol {
+  padding-left: 2.0em;
+}
+ul li,
+ol li {
+  margin: .4em;
+}
+code {
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  display: inline-block;
+  font-family: monospace;
+  padding: 0 .6em;
+  vertical-align: middle;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: 900;
+}

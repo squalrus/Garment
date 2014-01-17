@@ -2,73 +2,87 @@
 
 @Color_Footer_BG: @Color_Beer_05;
 
+@Container_Width:   960px;
+@Content_Width:     780px;
+@Span_Sizes:        12;
+@Span_Gutter:       20px;
 
-/** Container **/
+
+/**
+ * Container
+ * Site-wide container governing the width of the overall site.
+ */
 .gmt-container {
     margin: 0 auto;
-    width: 960px;
+    width: @Container_Width;
 }
 
-.gmt-container-wide {
-    margin: 0 auto;
-    width: 1260px;
-}
-
-.gmt-container-thin {
-    margin: 0 auto;
-    width: 660px;
-}
-
-// SPANS
-[class^='span-'] {
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top;
-}
-.span-3 {
-    width: 220px;
-}
-.span-9 {
-    width: 700px;
-}
-[class^='span-'] + [class^='span-'] {
-    margin-left: -4px;
-}
-
-// SECTION
+/**
+ * Section
+ * Thematic grouping of content, typically with a heading.
+ */
 section {
-
+    background-color: #fff;
+    padding: 40px 0;
+    width: 100%;
 }
 
-.section {
-
+section + section {
+    border-top: 1px solid #ddd;
 }
 
-// MAIN CONTENT
-.main-content {
-    position: relative;
+/**
+ * Content
+ * The content area within each section.
+ */
+.gmt-content {
+    margin: 0 auto;
+    width: @Content_Width;
 
-    .toggle-switch{
-        position: absolute;
-        right: 0;
-        top: 15px;
+    .gmt-span {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .gmt-span {
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
-// SIDEBAR
-.sidebar {
-    margin-right: 0;
-    width: 240px;
-
-    ul { margin: 0; }
+/**
+ * Span parts for dynamic widths
+ */
+.gmt-span {
+    background-color: #006; // remove
+    color: #fff; // remove
+    display: inline-block;
+    margin: 8px 0;
+    margin-left: -4px;
+    margin-right: @Span_Gutter;
+    padding: 6px 0; // remove
+    text-align: center; // remove
+    vertical-align: top;
 }
 
-// FOOTER
-footer {
-    background-color: @Color_Footer_BG;
-    color: darken( @Color_Mid, 40% );
-    margin: 0;
-    padding: 25px 0 80px;
+.spans(@index) when (@index > 0) {
+    .gmt-span-@{index}:extend(.gmt-span all) {
+        width: ((@Content_Width + @Span_Gutter) / @Span_Sizes) * @index - @Span_Gutter;
+    }
+    .spans(@index - 1);
+}
+.spans(0) {}
+.spans(@Span_Sizes);
 
-    p { margin: 0; }
+
+/**
+ * Footer
+ */
+footer {
+    background-color: @Color_Dark;
+    color: #fff;
+    margin: 0;
+    padding: 25px 20px 80px;
 }

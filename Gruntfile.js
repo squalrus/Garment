@@ -8,7 +8,7 @@ module.exports = function (grunt) {
         less: {
             development: {
                 options: {
-                    compress: true
+                    compress: false
                 },
                 files: {
                      "dist/underpants/latest.min.css": ["lib/underpants/reset.less", "lib/underpants/main.less"],
