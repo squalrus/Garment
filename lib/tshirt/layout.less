@@ -1,0 +1,74 @@
+@import "../_definition/color.d.less";
+
+@Color_Footer_BG: @Color_Beer_05;
+
+
+/** Container **/
+.gmt-container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.gmt-container-wide {
+    margin: 0 auto;
+    width: 1260px;
+}
+
+.gmt-container-thin {
+    margin: 0 auto;
+    width: 660px;
+}
+
+// SPANS
+[class^='span-'] {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
+.span-3 {
+    width: 220px;
+}
+.span-9 {
+    width: 700px;
+}
+[class^='span-'] + [class^='span-'] {
+    margin-left: -4px;
+}
+
+// SECTION
+section {
+
+}
+
+.section {
+
+}
+
+// MAIN CONTENT
+.main-content {
+    position: relative;
+
+    .toggle-switch{
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+}
+
+// SIDEBAR
+.sidebar {
+    margin-right: 0;
+    width: 240px;
+
+    ul { margin: 0; }
+}
+
+// FOOTER
+footer {
+    background-color: @Color_Footer_BG;
+    color: darken( @Color_Mid, 40% );
+    margin: 0;
+    padding: 25px 0 80px;
+
+    p { margin: 0; }
+}
