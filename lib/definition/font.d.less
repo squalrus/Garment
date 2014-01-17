@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,900);
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,900);
+
+@Font_Custom:   "Ruda", sans-serif ;
+@Font_Standard: arial, helvetica, sans-serif;
+
+.font-heading(@size: 1em) {
+    color: @Color_Font;
+    font-family: @Font_Custom;
+    font-size: @size;
+    font-weight: 900;
+    margin-bottom: .6em;
+    text-transform: uppercase;
+}
+
+.font-normal(@size: 14px) {
+    color: @Color_Font;
+    font-family: @Font_Custom;
+    font-size: @size;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 1em;
+}

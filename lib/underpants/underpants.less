@@ -1,0 +1,83 @@
+@import "../definition/color.d.less";
+@import "../definition/font.d.less";
+@import "../definition/mixin.d.less";
+
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: @Color_BG;
+    color: @Color_Text;
+    font-family: @Font_Standard;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a:link, a:visited {
+    color: @Color_Primary;
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    color: @Color_Primary;
+    text-decoration: underline;
+}
+
+p {
+    .font-normal(14px);
+}
+
+h1 {
+    .font-heading(54px);
+}
+
+h2 {
+    .font-heading(38px);
+}
+
+h3 {
+    .font-heading(32px);
+}
+
+h4 {
+    .font-heading(26px);
+}
+
+h5 {
+    .font-heading(20px);
+}
+
+h6 {
+    .font-heading(14px);
+}
+
+hgroup {
+    margin: 10px 0;
+}
+
+
+ul, ol {
+    padding-left: 2.0em;
+
+    li { margin: .4em; }
+}
+
+// STYLE ELEMENTS
+code {
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    display: inline-block;
+    font-family: monospace;
+    padding: 0 .6em;
+    vertical-align: middle;
+    .rounded-corners();
+}
+
+em { font-style: italic; }
+
+strong { font-weight: 900; }
+
+// LAYOUT
+section { margin-bottom: 3.0em; }

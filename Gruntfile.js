@@ -17,8 +17,8 @@ module.exports = function (grunt) {
         },
 
         // csslint
-        csslint: {
-            src: ["dist/**/*.css"]
+        lesslint: {
+            src: ["lib/**/*.less"]
         },
 
         // Watch Directories / Files
@@ -30,9 +30,9 @@ module.exports = function (grunt) {
 
     // Load the plugins
     grunt.loadNpmTasks("grunt-contrib-less");
-    grunt.loadNpmTasks("grunt-contrib-csslint");
+    grunt.loadNpmTasks("grunt-lesslint");
     grunt.loadNpmTasks("grunt-contrib-watch");
 
     // Default tasks
-    grunt.registerTask("default", ["less", "csslint"]);
+    grunt.registerTask("default", ["less", "lesslint"]);
 };
