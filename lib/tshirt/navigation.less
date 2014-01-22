@@ -1,0 +1,42 @@
+@import "../_definition/color.d.less";
+@import "../_definition/font.d.less";
+@import "../_definition/mixin.d.less";
+@import "../_definition/size.d.less";
+
+
+/**
+ * Groups of links on the page that navigate away or on the page itself
+ */
+nav {
+    margin: 0 auto;
+    width: @Width_Site;
+    .group();
+
+    a, a:hover {
+        color: @Color_Slate_01;
+    }
+
+    > a, > a:hover {
+        text-decoration: none;
+        text-transform: uppercase;
+        .font-heading(20px);
+    }
+
+    > ul {
+        float: right;
+        margin: 0;
+        padding: 0;
+        .group();
+
+        li {
+            float: left;
+            margin: 0 0 0 8px;
+            padding: 0;
+
+            a {
+                display: block;
+                padding: 2px 8px;
+            }
+        }
+    }
+}

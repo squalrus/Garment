@@ -4,6 +4,24 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
 
+        underpants: [
+            "lib/underpants/reset.less",
+            "lib/underpants/main.less"
+        ],
+
+        tshirt: [
+            "lib/tshirt/sections.less",
+            "lib/tshirt/layout.less",
+            "lib/tshirt/grouping.less",
+            "lib/tshirt/navigation.less",
+            "lib/tshirt/button.less"
+        ],
+
+        outfit: [
+            "<%= underpants %>",
+            "<%= tshirt %>"
+        ],
+
         // Compile LESS
         less: {
             development: {
@@ -12,11 +30,9 @@ module.exports = function (grunt) {
                     ieCompat: true
                 },
                 files: {
-                     "dist/underpants/latest.css": ["lib/underpants/reset.less", "lib/underpants/main.less"],
-
-                     "dist/tshirt/latest.css": ["lib/tshirt/layout.less", "lib/tshirt/navigation.less", "lib/tshirt/button.less"],
-
-                     "dist/outfit/latest.css": ["dist/underpants/latest.min.css", "dist/tshirt/latest.min.css"]
+                    "dist/underpants/latest.css": "<%= underpants %>",
+                    "dist/tshirt/latest.css": "<%= tshirt %>",
+                    "dist/outfit/latest.css": "<%= outfit %>"
 
                 }
             },
@@ -27,11 +43,9 @@ module.exports = function (grunt) {
                     report: "min"
                 },
                 files: {
-                     "dist/underpants/latest.min.css": ["lib/underpants/reset.less", "lib/underpants/main.less"],
-
-                     "dist/tshirt/latest.min.css": ["lib/tshirt/layout.less", "lib/tshirt/navigation.less", "lib/tshirt/button.less"],
-
-                     "dist/outfit/latest.min.css": ["dist/underpants/latest.min.css", "dist/tshirt/latest.min.css"]
+                     "dist/underpants/latest.min.css": "<%= underpants %>",
+                     "dist/tshirt/latest.min.css": "<%= tshirt %>",
+                     "dist/outfit/latest.min.css": "<%= outfit %>"
 
                 }
             }

@@ -1,0 +1,48 @@
+@import "../_definition/color.d.less";
+@import "../_definition/font.d.less";
+
+
+/**
+ * Horizontal rule
+ * Paragraph-level thematic break.
+ */
+hr {
+
+}
+
+/**
+ * Preformatted text
+ * Block of preformatted text.
+ */
+pre {
+    .font-console(13px);
+}
+
+blockquote {
+    .font-normal(2em);
+    color: @Color_Slate_02;
+    margin: 0 0 0 20px;
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+        content: "\201C";
+        display: inline-block;
+        font-size: 70px;
+        height: 20px;
+        left: -7px;
+        margin: 15px 0 0 0;
+        position: absolute;
+        top: 0;
+    }
+
+    &::after {
+        content: "\201D";
+        display: inline-block;
+        font-size: 70px;
+        height: 20px;
+        margin: 15px 0 0 5px;
+        position: absolute;
+        top: 0;
+    }
+}

@@ -1,11 +1,11 @@
 /**
- * Container
- * Site-wide container governing the width of the overall site.
+ * Article
+ * Independent item section of content, content should be independently distributable or reusable.
  */
-.gmt-container {
-  margin: 0 auto;
-  width: 960px;
-}
+/**
+ * Aside
+ * Content that is tangentially related to the content around the aside element, but considered separate.
+ */
 /**
  * Section
  * Thematic grouping of content, typically with a heading.
@@ -17,6 +17,46 @@ section {
 }
 section + section {
   border-top: 1px solid #ddd;
+}
+/**
+ * Header
+ *
+ */
+header {
+  background-color: #222222;
+  display: block;
+  padding: 14px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/**
+ * Footer
+ * Typically contains author, links to related documents, copyright data, etc.
+ */
+footer {
+  background-color: #222222;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 60px;
+  padding-top: 14px;
+  width: 100%;
+}
+/**
+ * Address
+ * Represents contact information. Typically in footer.
+ */
+address {
+  display: inline;
+}
+
+/**
+ * Container
+ * Site-wide container governing the width of the overall site.
+ */
+.gmt-container {
+  margin: 48px auto 0;
+  width: 960px;
 }
 /**
  * Content
@@ -118,14 +158,99 @@ section + section {
 .gmt-span-1 {
   width: 46.66666666666667px;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,900);
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,900);
 /**
- * Footer
+ * Horizontal rule
+ * Paragraph-level thematic break.
  */
-footer {
-  background-color: #222222;
-  color: #fff;
-  margin: 0;
-  padding: 25px 20px 80px;
+/**
+ * Preformatted text
+ * Block of preformatted text.
+ */
+pre {
+  font-family: "Ruda", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: .4em 0;
+}
+blockquote {
+  font-family: "Ruda", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin: 1em 0;
+  color: #999999;
+  margin: 0 0 0 20px;
+  padding-left: 20px;
+  position: relative;
+}
+blockquote::before {
+  content: "\201C";
+  display: inline-block;
+  font-size: 70px;
+  height: 20px;
+  left: -7px;
+  margin: 15px 0 0 0;
+  position: absolute;
+  top: 0;
+}
+blockquote::after {
+  content: "\201D";
+  display: inline-block;
+  font-size: 70px;
+  height: 20px;
+  margin: 15px 0 0 5px;
+  position: absolute;
+  top: 0;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,900);
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,900);
+/**
+ * Groups of links on the page that navigate away or on the page itself
+ */
+nav {
+  margin: 0 auto;
+  width: 960px;
+}
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav a,
+nav a:hover {
+  color: #ffffff;
+}
+nav > a,
+nav > a:hover {
+  text-decoration: none;
+  font-family: "Ruda", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0 0 .6em;
+  text-transform: uppercase;
+}
+nav > ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+nav > ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav > ul li {
+  float: left;
+  margin: 0 0 0 8px;
+  padding: 0;
+}
+nav > ul li a {
+  display: block;
+  padding: 2px 8px;
+}
 

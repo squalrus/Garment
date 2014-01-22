@@ -3,21 +3,28 @@
 
 @Font_Custom:   "Ruda", sans-serif ;
 @Font_Standard: arial, helvetica, sans-serif;
+@Font_Console:  consolas, monospace;
 
 .font-heading(@size: 1em) {
-    color: @Color_Font;
     font-family: @Font_Custom;
     font-size: @size;
     font-weight: 900;
-    margin-bottom: .6em;
+    margin: 0 0 .6em;
     text-transform: uppercase;
 }
 
 .font-normal(@size: 14px) {
-    color: @Color_Font;
     font-family: @Font_Custom;
     font-size: @size;
     font-weight: 400;
     line-height: 1.6em;
-    margin: 1em;
+    margin: 1em 0;
+}
+
+.font-console(@size: 14px) {
+    font-family: @Font_Custom;
+    font-size: @size;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: .4em 0;
 }

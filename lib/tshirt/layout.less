@@ -13,22 +13,8 @@
  * Site-wide container governing the width of the overall site.
  */
 .gmt-container {
-    margin: 0 auto;
+    margin: 48px auto 0;
     width: @Container_Width;
-}
-
-/**
- * Section
- * Thematic grouping of content, typically with a heading.
- */
-section {
-    background-color: #fff;
-    padding: 40px 0;
-    width: 100%;
-}
-
-section + section {
-    border-top: 1px solid #ddd;
 }
 
 /**
@@ -75,14 +61,3 @@ section + section {
 }
 .spans(0) {}
 .spans(@Span_Sizes);
-
-
-/**
- * Footer
- */
-footer {
-    background-color: @Color_Dark;
-    color: #fff;
-    margin: 0;
-    padding: 25px 20px 80px;
-}

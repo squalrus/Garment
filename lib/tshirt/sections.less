@@ -1,0 +1,67 @@
+@import "../_definition/color.d.less";
+
+
+/**
+ * Article
+ * Independent item section of content, content should be independently distributable or reusable.
+ */
+article {
+
+}
+
+/**
+ * Aside
+ * Content that is tangentially related to the content around the aside element, but considered separate.
+ */
+aside {
+
+}
+
+/**
+ * Section
+ * Thematic grouping of content, typically with a heading.
+ */
+section {
+    background-color: #fff;
+    padding: 40px 0;
+    width: 100%;
+
+    // Section dividers
+    & + section {
+        border-top: 1px solid #ddd;
+    }
+}
+
+/**
+ * Header
+ *
+ */
+header {
+    background-color: @Color_Slate_06;
+    display: block;
+    padding: 14px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/**
+ * Footer
+ * Typically contains author, links to related documents, copyright data, etc.
+ */
+footer {
+    background-color: @Color_Slate_06;
+    color: @Color_Slate_01;
+    margin: 0;
+    padding-bottom: 60px;
+    padding-top: 14px;
+    width: 100%;
+}
+
+/**
+ * Address
+ * Represents contact information. Typically in footer.
+ */
+address {
+    display: inline;
+}
