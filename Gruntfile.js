@@ -59,8 +59,15 @@ module.exports = function (grunt) {
         // Watch Directories / Files
         watch: {
             files: ["lib/**/*.less"],
-            tasks: ["default"]
+            tasks: ["default"],
+            options: {
+                spawn: false
+            }
         }
+    });
+
+    grunt.event.on("watch", function (action, filepath) {
+        grunt.config("lesslint.src", filepath);
     });
 
     // Load the plugins
