@@ -1,0 +1,60 @@
+// Taken from squalrusbrews
+// Not included in dist
+@import "../_definition/color.d.less";
+@import "../_definition/text.d.less";
+@import "../_definition/mixin.d.less";
+
+// BUTTONS
+.btn {
+    background-color: @Color_Dark;
+    border: 1px solid darken( @Color_Dark, 10% );
+    color: @Color_Light;
+    display: inline-block;
+    font-family: @Font_Custom;
+    font-size: 1.3em;
+    font-weight: 900;
+    padding: 0.8em 1.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    .rounded-corners();
+}
+
+.btn-primary {
+    background-color: @Color_Primary;
+    border: 1px solid darken( @Color_Primary, 10% );
+}
+
+a.btn:link, a.btn:visited,
+a.btn:active, a.btn:hover {
+    color: #F4F4F4;
+    text-decoration: none;
+}
+
+// TOGGLE SWITCH
+ul.toggle-switch {
+    margin: 0;
+
+    li {
+        display: inline-block;
+        margin: 0;
+
+        a {
+            cursor: pointer;
+            display: block;
+            padding: .4em .4em;
+            .rounded-corners();
+
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+    li.active {
+        a {
+            background-color: @Color_Primary;
+            color: #FFF;
+            padding: .4em .8em;
+
+            &:hover { text-decoration: none; }
+        }
+    }
+}

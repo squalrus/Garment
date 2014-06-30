@@ -1,5 +1,5 @@
 @import "../_definition/color.d.less";
-@import "../_definition/font.d.less";
+@import "../_definition/text.d.less";
 @import "../_definition/mixin.d.less";
 @import "../_definition/size.d.less";
 
@@ -17,9 +17,11 @@ nav {
     }
 
     > a, > a:hover {
+        .font-heading(20px);
+        float: left;
+        margin: 0;
         text-decoration: none;
         text-transform: uppercase;
-        .font-heading(20px);
     }
 
     > ul {

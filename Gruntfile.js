@@ -5,16 +5,17 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON("package.json"),
 
         underpants: [
+            "lib/underpants/font.less",
             "lib/underpants/reset.less",
-            "lib/underpants/main.less"
+            "lib/underpants/main.less",
+            "lib/underpants/table.less"
         ],
 
         tshirt: [
             "lib/tshirt/sections.less",
             "lib/tshirt/layout.less",
             "lib/tshirt/grouping.less",
-            "lib/tshirt/navigation.less",
-            "lib/tshirt/button.less"
+            "lib/tshirt/navigation.less"
         ],
 
         outfit: [
@@ -76,5 +77,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
 
     // Default tasks
-    grunt.registerTask("default", ["less", "lesslint"]);
+    grunt.registerTask("default", ["less"]);
 };

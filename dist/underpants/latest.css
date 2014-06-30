@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,900);
+
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
@@ -127,8 +129,6 @@ table {
   border-spacing: 0;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,900);
-@import url(http://fonts.googleapis.com/css?family=Ruda:400,900);
 html {
   font-size: 100%;
 }
@@ -148,49 +148,49 @@ a:hover {
   text-decoration: underline;
 }
 p {
-  font-family: "Ruda", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.6em;
   margin: 1em 0;
 }
 h1 {
-  font-family: "Ruda", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 54px;
   font-weight: 900;
   margin: 0 0 .6em;
   text-transform: uppercase;
 }
 h2 {
-  font-family: "Ruda", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 38px;
   font-weight: 900;
   margin: 0 0 .6em;
   text-transform: uppercase;
 }
 h3 {
-  font-family: "Ruda", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 32px;
   font-weight: 900;
   margin: 0 0 .6em;
   text-transform: uppercase;
 }
 h4 {
-  font-family: "Ruda", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 900;
   margin: 0 0 .6em;
   text-transform: uppercase;
 }
 h5 {
-  font-family: "Ruda", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 900;
   margin: 0 0 .6em;
   text-transform: uppercase;
 }
 h6 {
-  font-family: "Ruda", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: 900;
   margin: 0 0 .6em;
@@ -219,5 +219,26 @@ em {
   font-style: italic;
 }
 strong {
+  font-weight: 900;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.text-right {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;
+}
+table tr td {
+  border: 1px solid #dddddd;
+  padding: 3px 8px;
+}
+table tr td:first-child {
   font-weight: 900;
 }
