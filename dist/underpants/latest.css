@@ -142,11 +142,11 @@ body {
 }
 a {
   color: #4690e0;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   color: #4690e0;
-  text-decoration: underline;
+  text-decoration: none;
 }
 p {
   font-family: "Roboto", sans-serif;
@@ -209,15 +209,20 @@ ol li {
   margin: .4em;
 }
 code {
-  background-color: #eaeaea;
-  border: 1px solid #ccc;
-  display: inline-block;
-  font-family: monospace;
-  padding: 0 .6em;
-  vertical-align: middle;
+  font-family: consolas, monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4em;
+  margin: 0;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  background-color: #eaeaea;
+  border: 1px solid #999999;
+  display: inline-block;
+  margin: 0 .4em;
+  padding: 0 .4em;
+  vertical-align: middle;
 }
 em {
   font-style: italic;

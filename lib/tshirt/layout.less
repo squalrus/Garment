@@ -11,7 +11,7 @@
  * Site-wide container governing the width of the overall site.
  */
 .gmt-container {
-    margin: 48px auto 0;
+    margin: 52px auto 0;
     width: @Container_Width;
 }
 
@@ -23,13 +23,13 @@
     margin: 0 auto;
     width: @Content_Width;
 
-    .gmt-span {
+    > .gmt-span {
         &:first-child {
             margin-left: 0;
         }
     }
 
-    .gmt-span {
+    > .gmt-span {
         &:last-child {
             margin-right: 0;
         }
@@ -48,7 +48,7 @@
 }
 
 .spans(@index) when (@index > 0) {
-    .gmt-span-@{index}:extend(.gmt-span all) {
+    .gmt-span-@{index}:extend(.gmt-span) {
         width: ((@Content_Width + @Span_Gutter) / @Span_Sizes) * @index - @Span_Gutter;
     }
     .spans(@index - 1);

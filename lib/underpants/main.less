@@ -17,12 +17,12 @@ body {
 
 a {
     color: @Color_Primary;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {
     color: @Color_Primary;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 p {
@@ -60,13 +60,14 @@ ul, ol {
 }
 
 code {
-    background-color: #eaeaea;
-    border: 1px solid #ccc;
+    .font-console(12px);
+    .rounded-corners(4px);
+    background-color: @Color_Slate_02;
+    border: 1px solid @Color_Slate_03;
     display: inline-block;
-    font-family: monospace;
-    padding: 0 .6em;
+    margin: 0 .4em;
+    padding: 0 .4em;
     vertical-align: middle;
-    .rounded-corners();
 }
 
 em { font-style: italic; }
