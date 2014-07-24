@@ -2,6 +2,8 @@
 
 Dress up your site!
 
+See the demo: http://garment.squalr.us/garment/latest.html
+
 ###Underpants
 - An HTML reset, courtesy of Eric Meyer, to gwt everything acting the same.
 - Some core element styling -- font sizes and spacing for typography
