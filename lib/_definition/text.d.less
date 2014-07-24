@@ -1,25 +1,35 @@
-@Font_Custom:   "Raleway", sans-serif;
+@Font_Custom1:  "Ubuntu", sans-serif;
+@Font_Custom2:  "Roboto", sans-serif;
 @Font_Standard: arial, helvetica, sans-serif;
 @Font_Console:  consolas, monospace;
 
-.font-heading(@size: 1em) {
-    font-family: @Font_Custom;
+.font-heading1(@size: 1em) {
+    font-family: @Font_Custom1;
     font-size: @size;
-    font-weight: 900;
-    margin: 0 0 .6em;
+    font-weight: 300;
+    line-height: 160%;
+    margin: 0;
+}
+
+.font-heading2(@size: 1em) {
+    font-family: @Font_Custom1;
+    font-size: @size;
+    font-weight: 700;
+    line-height: 160%;
+    margin: 0;
     text-transform: uppercase;
 }
 
 .font-normal(@size: 14px) {
-    font-family: @Font_Custom;
+    font-family: @Font_Custom2;
     font-size: @size;
     font-weight: 400;
-    line-height: 1.6em;
+    line-height: 160%;
     margin: 1em 0;
 }
 
 .font-console(@size: 14px) {
-    font-family: @Font_Custom;
+    font-family: @Font_Console;
     font-size: @size;
     font-weight: 400;
     line-height: 1.2em;

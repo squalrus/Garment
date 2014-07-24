@@ -165,17 +165,17 @@ address {
  * Block of preformatted text.
  */
 pre {
-  font-family: "Raleway", sans-serif;
+  font-family: consolas, monospace;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.2em;
   margin: .4em 0;
 }
 blockquote {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2em;
   font-weight: 400;
-  line-height: 1.6em;
+  line-height: 160%;
   margin: 1em 0;
   color: #999999;
   margin: 0 0 0 20px;
@@ -220,10 +220,10 @@ nav a:hover {
 }
 nav > a,
 nav > a:hover {
-  font-family: "Raleway", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 20px;
-  font-weight: 900;
-  margin: 0 0 .6em;
+  font-weight: 700;
+  line-height: 160%;
   float: left;
   margin: 0;
   text-decoration: none;
