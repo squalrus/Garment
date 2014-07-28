@@ -1,0 +1,14 @@
+.gmt-section-grid {
+  background-color: #1f5ebf;
+  background-image: url(../images/grid-patterns/grid21.png);
+  background-repeat: repeat;
+}
+.gmt-section-grid h1,
+.gmt-section-grid h2,
+.gmt-section-grid h3,
+.gmt-section-grid h4,
+.gmt-section-grid h5,
+.gmt-section-grid h6,
+.gmt-section-grid p {
+  color: #ffffff;
+}

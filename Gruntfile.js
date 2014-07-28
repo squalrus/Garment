@@ -18,9 +18,14 @@ module.exports = function (grunt) {
             "lib/tshirt/navigation.less"
         ],
 
+        pantsuit: [
+            "lib/pantsuit/sections.less"
+        ],
+
         outfit: [
             "<%= underpants %>",
-            "<%= tshirt %>"
+            "<%= tshirt %>",
+            "<%= pantsuit %>"
         ],
 
         // Compile LESS
@@ -33,6 +38,7 @@ module.exports = function (grunt) {
                 files: {
                     "dist/underpants/latest.css": "<%= underpants %>",
                     "dist/tshirt/latest.css": "<%= tshirt %>",
+                    "dist/pantsuit/latest.css": "<%= pantsuit %>",
                     "dist/outfit/latest.css": "<%= outfit %>"
 
                 }
@@ -46,6 +52,7 @@ module.exports = function (grunt) {
                 files: {
                      "dist/underpants/latest.min.css": "<%= underpants %>",
                      "dist/tshirt/latest.min.css": "<%= tshirt %>",
+                     "dist/pantsuit/latest.min.css": "<%= pantsuit %>",
                      "dist/outfit/latest.min.css": "<%= outfit %>"
 
                 }
