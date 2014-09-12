@@ -224,6 +224,9 @@ code {
   padding: 0 .4em;
   vertical-align: middle;
 }
+code pre {
+  display: block;
+}
 em {
   font-style: italic;
 }
@@ -395,11 +398,7 @@ address {
  * Block of preformatted text.
  */
 pre {
-  font-family: consolas, monospace;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.4em;
-  margin: 0;
+  display: block;
 }
 blockquote {
   font-family: "Roboto", sans-serif;
@@ -447,6 +446,7 @@ nav:after {
 nav a,
 nav a:hover {
   color: #ffffff;
+  text-decoration: none;
 }
 nav > a,
 nav > a:hover {
@@ -456,7 +456,6 @@ nav > a:hover {
   line-height: 160%;
   float: left;
   margin: 0;
-  text-decoration: none;
   text-transform: uppercase;
 }
 nav > ul {

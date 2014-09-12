@@ -224,6 +224,9 @@ code {
   padding: 0 .4em;
   vertical-align: middle;
 }
+code pre {
+  display: block;
+}
 em {
   font-style: italic;
 }
