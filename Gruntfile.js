@@ -4,6 +4,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
 
+        chadschulz: [
+            "lib/cs/chadschulz.less"
+        ],
+
         underpants: [
             "lib/underpants/font.less",
             "lib/underpants/reset.less",
@@ -39,7 +43,8 @@ module.exports = function (grunt) {
                     "dist/underpants/latest.css": "<%= underpants %>",
                     "dist/tshirt/latest.css": "<%= tshirt %>",
                     "dist/pantsuit/latest.css": "<%= pantsuit %>",
-                    "dist/outfit/latest.css": "<%= outfit %>"
+                    "dist/outfit/latest.css": "<%= outfit %>",
+                    "dist/cs/latest.css": "<%= chadschulz %>"
 
                 }
             },
@@ -53,7 +58,8 @@ module.exports = function (grunt) {
                      "dist/underpants/latest.min.css": "<%= underpants %>",
                      "dist/tshirt/latest.min.css": "<%= tshirt %>",
                      "dist/pantsuit/latest.min.css": "<%= pantsuit %>",
-                     "dist/outfit/latest.min.css": "<%= outfit %>"
+                     "dist/outfit/latest.min.css": "<%= outfit %>",
+                     "dist/cs/latest.min.css": "<%= chadschulz %>"
 
                 }
             }
