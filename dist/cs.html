@@ -1,140 +1,271 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Latest | Garment</title>
+    <title>Latest | (cs)</title>
     <link rel="stylesheet" type="text/css" href="outfit/latest.min.css" />
-    <style type="text/css">
-        .gmt-span {
-            background-color: #ddd;
-            color: #333;
-            padding: 6px 0;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="cs/latest.min.css" />
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="#">Garment.css</a>
-            <ul>
-                <li><a href="#">Underpants</a></li>
-                <li><a href="#">Tshirt</a></li>
-                <li><a href="#">Pantsuit</a></li>
-                <li><a href="#">Outfit</a></li>
-            </ul>
+            <a href="/">
+                <img src="http://38.media.tumblr.com/avatar_3950e7163c48_24.png" />
+                Blog
+            </a>
+            <span>This is the blog description. It describes the blog.</span>
         </nav>
     </header>
+
     <div class="gmt-container">
         <section>
             <div class="gmt-content">
-                <h1>Heading Rank One</h1>
-                <h2>Heading Rank Two</h2>
-                <h3>Heading Rank Three</h3>
-                <h4>Heading Rank Four</h4>
-                <h5>Heading Rank Five</h5>
-                <h6>Heading Rank Six</h6>
+
+                <h4>Photo Post</h4>
+
+                <div class="post">
+                    <div class="media">
+                        <img src="http://40.media.tumblr.com/e98bb5c853e91d87f843ab3651c38e2d/tumblr_nh9t904zZY1qg4yujo1_500.jpg" alt="Caption" />
+                    </div>
+
+                    <div class="footer footer-tags">
+                        <div class="tags">
+                            <a href="X">#Tag</a>
+                            <a href="X">#OtherTag</a>
+                        </div>
+                    </div>
+
+                    <a href="{Permalink}" class="footer-posted">
+                        <div class="footer for_permalink">
+                            <div class="date">
+                                Posted 1 week ago
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <h4>Video Post</h4>
+
+                <div class="post">
+                </div>
+
+                <h4>Audio Post</h4>
+                <p>Currently supported: SoundCloud
+
+                <div class="post">
+                    <div class="post-album">
+                        <iframe src="images/chadschulz/post-album-sample.jpg" height="500" width="500">
+                            <html>
+                            <head></head>
+                            <body style="margin:0;overflow:hidden">
+                                <img src="images/chadschulz/post-album-sample.jpg" alt="" height="500" width="500" />
+                            </body>
+                            </html>
+                        </iframe>
+                        <img src="images/chadschulz/post-album.png" alt="" />
+                    </div>
+                </div>
+
+
+
+                {block:Posts}
+                <div class="post">
+                    {block:Audio}
+                    {block:AudioEmbed}
+                    <div class="post-album">
+                        {AudioEmbed-500}
+                        <img src="http://static.tumblr.com/9nchwjc/u0Angeljh/45rpm.png" alt="" />
+                    </div>
+                    {/block:AudioEmbed}
+                    {/block:Audio}
+
+                    {block:Quote}
+                    <div class="quote {Length}">{Quote}</div>
+                    <div class="copy">
+                        <div class="quotebg">“</div>
+                        {block:Source}
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" style="width:20px;">&mdash;</td>
+                                <td valign="top" class="quote_source">
+                                    {Source}
+                                </td>
+                            </tr>
+                        </table>
+                        {/block:Source}
+                    </div>
+                    {/block:Quote}
+
+                    {block:Text}
+                    {block:Title}<div class="title">{Title}</div>{/block:Title}
+                    <div class="copy">{Body}</div>
+                    {/block:Text}
+
+                    {block:Answer}
+                    <div class="question">
+                        <div class="nipple"></div>
+                        {Question}
+                    </div>
+                    <div class="asker_container"><img src="{AskerPortraitURL-24}">{Asker}</div>
+                    <div class="copy">{Answer}</div>
+                    {/block:Answer}
+
+                    {block:Chat}
+                    {block:Title}<div class="title">{Title}</div>{/block:Title}
+                    <div class="chat">
+                        <div class="lines">
+                            {block:Lines}
+                            <div class="line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</div>
+                            {/block:Lines}
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div style="height:10px;"></div>
+                    {/block:Chat}
+
+                    {block:Link}
+                    <div class="link"><a href="{URL}" {Target}>{Name} &raquo;</a></div>
+                    {block:Description}<div class="copy">{Description}</div>{/block:Description}
+                    {/block:Link}
+
+                    <div class="footer footer-tags {block:ContentSource}with_source_url{/block:ContentSource}" style="
+                    display:none;
+                    {block:IfShowTags}{block:HasTags}display:block;{/block:HasTags}{/block:IfShowTags}
+                    {block:ContentSource}display:block;{/block:ContentSource}
+                    ">
+                        {block:IfShowTags}
+                        {block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
+                        {/block:IfShowTags}
+
+                        {block:ContentSource}
+                        <a href="{SourceURL}" class="source_url">
+                            {lang:Source}:
+                            {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+                            {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                        </a>
+                        {/block:ContentSource}
+                    </div>
+
+                    {block:Date}
+                    <a href="{Permalink}" class="footer-posted">
+                        <div class="footer for_permalink">
+                            <div class="date">
+                                {block:Reblog}
+                                {lang:Reblogged TimeAgo from ReblogParentName} {block:RebloggedFromReblog}(<span style="text-transform:lowercase;">{lang:Originally from ReblogRootName}</span>){/block:RebloggedFromReblog}
+                                {/block:Reblog}
+
+                                {block:NotReblog}
+                                {lang:Posted TimeAgo from source}
+                                {/block:NotReblog}
+                            </div>
+                            <div class="notes">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} {block:IfDisqusShortname}{block:NoteCount}&bull;{/block:NoteCount} <a href="{Permalink}#disqus_thread">{lang:View comments}</a>{/block:IfDisqusShortname}</div>
+                        </div>
+                    </a>
+                    {/block:Date}
+
+                {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+
+                {block:IfDisqusShortname}
+                {block:Permalink}
+                <div class="notecontainer" style="margin:20px 0 1px 0; padding:1px 10px 10px 10px;">
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                </div>
+                <div style="text-align:right; margin-top:5px;">
+                    {lang:Blog comments powered by Disqus 2}
+                </div>
+                {/block:Permalink}
+                {/block:IfDisqusShortname}
+
             </div>
-        </section>
-        <section>
-            <div class="gmt-content">
-                <h3>Color Pallette</h3>
-            </div>
-            <div class="gmt-content">
-                <div class="gmt-span gmt-span-2" style="background-color:#eaeaea; min-height:100px"></div>
-                <div class="gmt-span gmt-span-2" style="background-color:#999; min-height:100px"></div>
-                <div class="gmt-span gmt-span-2" style="background-color:#7F7F7F; min-height:100px"></div>
-                <div class="gmt-span gmt-span-2" style="background-color:#404040; min-height:100px"></div>
-                <div class="gmt-span gmt-span-2" style="background-color:#333; min-height:100px"></div>
-                <div class="gmt-span gmt-span-2" style="background-color:#222; min-height:100px"></div>
-            </div>
-        </section>
-        <section>
-            <div class="gmt-content">
-                <h3>Paragraph</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Suspendisse</a> in lorem ut elit ultrices tincidunt. Donec eu commodo elit. Praesent congue purus vitae nisl lacinia lobortis. Phasellus cursus leo eu mi lacinia semper. Etiam aliquet tortor at lorem commodo convallis. Ut interdum sodales augue eget semper.</p>
-                <blockquote>Phasellus cursus leo eu mi lacinia semper.</blockquote>
-                <p>Donec condimentum, nisl eget iaculis ornare, augue velit aliquam massa, nec laoreet tortor est vitae lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <em>Aenean varius</em> diam tellus, et porta <strong>nibh dictum gravida</strong>. Suspendisse aliquet laoreet nulla, sit amet blandit libero tincidunt in. Integer ut leo eleifend, auctor nunc id, vulputate est. Nullam sit amet orci et eros gravida fringilla at non arcu. Sed et ipsum eget dui tempor porta.</p>
-            </div>
-        </section>
-        <section>
-            <div class="gmt-content">
-                <ul>
-                    <li>List of things</li>
-                    <li>Another item</li>
-                    <li>Final item of list</li>
-                </ul>
-                <ol>
-                    <li>List of things</li>
-                    <li>Another item</li>
-                    <li>Final item of list</li>
-                </ol>
-            </div>
-        </section>
-        <section>
-            <div class="gmt-content">
-                <h3>Miscellaneous</h3>
-                <pre>pre-formatted text     !!!</pre>
-                <p>This is some <code>inline code</code>.</p>
-<code><pre>Multi-line code;
-Looks cool too.</pre></code>
-            </div>
-        </section>
-        <section>
-            <div class="gmt-content">
-                <h3>Layout</h3>
-            </div>
-            <div class="gmt-content">
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-                <div class="gmt-span gmt-span-1">1</div>
-            </div>
-            <div class="gmt-content">
-                <div class="gmt-span gmt-span-2">2</div>
-                <div class="gmt-span gmt-span-2">2</div>
-                <div class="gmt-span gmt-span-2">2</div>
-                <div class="gmt-span gmt-span-2">2</div>
-                <div class="gmt-span gmt-span-2">2</div>
-                <div class="gmt-span gmt-span-2">2</div>
-            </div>
-            <div class="gmt-content">
-                <div class="gmt-span gmt-span-3">3</div>
-                <div class="gmt-span gmt-span-3">3</div>
-                <div class="gmt-span gmt-span-3">3</div>
-                <div class="gmt-span gmt-span-3">3</div>
-            </div>
-            <div class="gmt-content">
-                <div class="gmt-span gmt-span-4">4</div>
-                <div class="gmt-span gmt-span-4">4</div>
-                <div class="gmt-span gmt-span-4">4</div>
-            </div>
-            <div class="gmt-content">
-                <div class="gmt-span gmt-span-6">6</div>
-                <div class="gmt-span gmt-span-6">6</div>
-            </div>
-            <div class="gmt-content">
-                <div class="gmt-span gmt-span-12">12</div>
-            </div>
-        </section>
-        <section class="gmt-section-grid">
-            <div class="gmt-content">
-                <h3>Paragraph</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in lorem ut elit ultrices tincidunt. Donec eu commodo elit. Praesent congue purus vitae nisl lacinia lobortis. Phasellus cursus leo eu mi lacinia semper. Etiam aliquet tortor at lorem commodo convallis. Ut interdum sodales augue eget semper.</p>
-            </div>
-        </section>
-    </div>
-    <footer>
-        <div class="gmt-content">
-            &copy; 2014 Demo For <address><a href="http://squalr.us/garmant/demo/latest.html">Garment</a></address>
+            <div class="bottom"></div>
+            {/block:Posts}
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+</div>
+
+
+<div id="wrapper">
+
+    <div id="content">
+        {block:Pagination}
+        <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
+            {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
+
+            {block:IfEnableJumpPagination}
+            {block:JumpPagination length="5"}
+            {block:CurrentPage}
+            <span class="current_page">{PageNumber}</span>
+            {/block:CurrentPage}
+
+            {block:JumpPage}
+            <a class="jump_page" href="{URL}">{PageNumber}</a>
+            {/block:JumpPage}
+
+            {/block:JumpPagination}
+            {/block:IfEnableJumpPagination}
+
+            {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
+        </div>
+        {/block:Pagination}
+
+    </div>
+
+    <div id="sidebar">
+        <div id="top">
+            <div id="pages" class="ask_and_submit">
+                {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
+                {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
+                <div class="clear"></div>
+            </div>
+
+            {block:HasPages}
+            <div id="pages">
+                {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
+                <div class="clear"></div>
+            </div>
+            {/block:HasPages}
+
+            {block:Twitter}
+            <div id="twitterwrapper" style="display:none;">
+                <a href="http://twitter.com/{TwitterUsername}" style="text-decoration:none;"><div class="heading" id="twitter">{lang:Latest Tweets}</div></a>
+                <div id="tweetcontainer"></div>
+                <script type="text/javascript">
+                function recent_tweets(data) {
+                    document.getElementById("twitterwrapper").style.display = "block";
+                    for(i = 0; i < data.length; i++) {
+                        document.getElementById("tweetcontainer").innerHTML = document.getElementById("tweetcontainer").innerHTML + '<a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '"><div class="content">' + data[i].text + '</div></a>';
+                    }
+                }
+                </script>
+            </div>
+            {/block:Twitter}
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+{block:Twitter}
+<script type="text/javascript" src="/tweets.js"></script>
+{/block:Twitter}
+
+{block:IfDisqusShortname}
+<script type="text/javascript">
+            //<![CDATA[
+            (function() {
+                var links = document.getElementsByTagName('a');
+                var query = '?';
+                for(var i = 0; i < links.length; i++) {
+                    if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                    }
+                }
+                document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+            })();
+            //]]>
+            </script>
+            {/block:IfDisqusShortname}
+        </body>
+        </html>

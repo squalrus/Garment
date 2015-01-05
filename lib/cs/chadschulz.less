@@ -1,4 +1,102 @@
+header {
+    margin-top: 0;
+}
 
-        header {
-            margin-top: 0;
-        }
+header nav,
+.gmt-content {
+    width: 500px;
+}
+
+header nav img {
+    margin: -5px 6px -5px 0;
+    border: 1px solid #FFF;
+}
+
+.gmt-container {
+    background-image: url({HeaderImage});
+    background-position: 50% -80px;
+    padding-top: 52px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.gmt-container section {
+    background-color: #eee;
+    width: auto;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.post .title {
+    font-size: 24px;
+}
+
+.post .copy {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 14px;
+}
+
+.post .media {
+    margin: -15px;
+    margin-bottom: 14px;
+}
+
+.post .media img {
+    width: 498px;
+}
+
+.post .footer-tags a,
+.post .footer-posted {
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.post .footer-tags {
+    float: right;
+}
+
+.post .footer-tags a {
+    color: #aaa;
+}
+
+.post .footer-tags .tags > a {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.post .footer-tags .tags > a:first-child {
+    margin-left: 0;
+}
+
+// POST ALBUM
+.post-album {
+    height: 498px;
+    margin: -15px;
+    position: relative;
+    width: 498px;
+
+    iframe {
+        height: 498px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 498px;
+        z-index: 2;
+    }
+
+    img {
+        height: 478px;
+        left: 40px;
+        position: absolute;
+        top: 10px;
+        width: 478px;
+        z-index: 1;
+    }
+}
