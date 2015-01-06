@@ -1,25 +1,48 @@
+/**
+ * Header overrides
+ */
 header {
   margin-top: 0;
 }
-header nav,
-.gmt-content {
-  width: 500px;
+/**
+ * Section overrides
+ */
+section {
+  background-color: #eee;
+  width: auto;
 }
-header nav img {
-  margin: -5px 6px -5px 0;
-  border: 1px solid #FFF;
-}
+
+/**
+ * Container overrides
+ */
 .gmt-container {
-  background-image: url({HeaderImage});
   background-position: 50% -80px;
   padding-top: 52px;
   margin-top: 0;
   width: 100%;
 }
-.gmt-container section {
-  background-color: #eee;
-  width: auto;
+/**
+ * Content overrides
+ */
+.gmt-content {
+  width: 500px;
 }
+
+/**
+ * Navigation overrides
+ */
+nav {
+  width: 500px;
+}
+nav .nav-logo {
+  margin: -5px 6px -5px 0;
+  border: 1px solid #FFF;
+}
+
+/**
+ * Post
+ * Overarching post styling
+ */
 .post {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -31,27 +54,27 @@ header nav img {
 }
 .post .copy {
   border-bottom: 1px solid #eee;
-  margin-bottom: 14px;
 }
-.post .media {
-  margin: -15px;
-  margin-bottom: 14px;
+.post .footer {
+  padding-top: 15px;
 }
-.post .media img {
-  width: 498px;
-}
-.post .footer-tags a,
-.post .footer-posted {
-  color: #888;
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
+.post .footer:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .post .footer-tags {
   float: right;
+  max-width: 50%;
 }
 .post .footer-tags a {
-  color: #aaa;
+  display: inline-block;
+  color: #888;
+  font-size: 11px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 0 0 4px 8px;
 }
 .post .footer-tags .tags > a {
   display: inline-block;
@@ -60,9 +83,21 @@ header nav img {
 .post .footer-tags .tags > a:first-child {
   margin-left: 0;
 }
+.post .footer-source,
+.post .footer-posted {
+  color: #888;
+  font-size: 11px;
+  max-width: 50%;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/**
+ * Album Post
+ */
 .post-album {
   height: 498px;
-  margin: -15px;
+  margin: -15px -15px 0 -15px;
   position: relative;
   width: 498px;
 }
@@ -74,11 +109,21 @@ header nav img {
   width: 498px;
   z-index: 2;
 }
-.post-album img {
+.post-album .record {
   height: 478px;
   left: 40px;
   position: absolute;
   top: 10px;
   width: 478px;
   z-index: 1;
+}
+
+/**
+ * Photo Post
+ */
+.post-photo {
+  margin: -15px -15px 0 -15px;
+}
+.post-photo img {
+  width: 498px;
 }

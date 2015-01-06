@@ -5,7 +5,12 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON("package.json"),
 
         chadschulz: [
-            "lib/cs/chadschulz.less"
+            "lib/cs/sections.less",
+            "lib/cs/layout.less",
+            "lib/cs/navigation.less",
+            "lib/cs/post.less",
+            "lib/cs/post-album.less",
+            "lib/cs/post-photo.less"
         ],
 
         underpants: [

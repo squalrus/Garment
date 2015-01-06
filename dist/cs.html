@@ -10,7 +10,7 @@
     <header>
         <nav>
             <a href="/">
-                <img src="http://38.media.tumblr.com/avatar_3950e7163c48_24.png" />
+                <img class="nav-logo" src="http://38.media.tumblr.com/avatar_3950e7163c48_24.png" />
                 Blog
             </a>
             <span>This is the blog description. It describes the blog.</span>
@@ -24,24 +24,20 @@
                 <h4>Photo Post</h4>
 
                 <div class="post">
-                    <div class="media">
+                    <div class="post-photo">
                         <img src="http://40.media.tumblr.com/e98bb5c853e91d87f843ab3651c38e2d/tumblr_nh9t904zZY1qg4yujo1_500.jpg" alt="Caption" />
                     </div>
 
-                    <div class="footer footer-tags">
-                        <div class="tags">
+                    <div class="footer">
+                        <div class="footer-tags">
                             <a href="X">#Tag</a>
                             <a href="X">#OtherTag</a>
                         </div>
+                        <a href="{Permalink}" class="footer-posted">
+                            Posted 1 week ago
+                        </a>
                     </div>
 
-                    <a href="{Permalink}" class="footer-posted">
-                        <div class="footer for_permalink">
-                            <div class="date">
-                                Posted 1 week ago
-                            </div>
-                        </div>
-                    </a>
                 </div>
 
                 <h4>Video Post</h4>
@@ -52,207 +48,227 @@
                 <h4>Audio Post</h4>
                 <p>Currently supported: SoundCloud
 
-                <div class="post">
-                    <div class="post-album">
-                        <iframe src="images/chadschulz/post-album-sample.jpg" height="500" width="500">
-                            <html>
-                            <head></head>
-                            <body style="margin:0;overflow:hidden">
-                                <img src="images/chadschulz/post-album-sample.jpg" alt="" height="500" width="500" />
-                            </body>
-                            </html>
-                        </iframe>
-                        <img src="images/chadschulz/post-album.png" alt="" />
-                    </div>
-                </div>
-
-
-
-                {block:Posts}
-                <div class="post">
-                    {block:Audio}
-                    {block:AudioEmbed}
-                    <div class="post-album">
-                        {AudioEmbed-500}
-                        <img src="http://static.tumblr.com/9nchwjc/u0Angeljh/45rpm.png" alt="" />
-                    </div>
-                    {/block:AudioEmbed}
-                    {/block:Audio}
-
-                    {block:Quote}
-                    <div class="quote {Length}">{Quote}</div>
-                    <div class="copy">
-                        <div class="quotebg">“</div>
-                        {block:Source}
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tr>
-                                <td valign="top" style="width:20px;">&mdash;</td>
-                                <td valign="top" class="quote_source">
-                                    {Source}
-                                </td>
-                            </tr>
-                        </table>
-                        {/block:Source}
-                    </div>
-                    {/block:Quote}
-
-                    {block:Text}
-                    {block:Title}<div class="title">{Title}</div>{/block:Title}
-                    <div class="copy">{Body}</div>
-                    {/block:Text}
-
-                    {block:Answer}
-                    <div class="question">
-                        <div class="nipple"></div>
-                        {Question}
-                    </div>
-                    <div class="asker_container"><img src="{AskerPortraitURL-24}">{Asker}</div>
-                    <div class="copy">{Answer}</div>
-                    {/block:Answer}
-
-                    {block:Chat}
-                    {block:Title}<div class="title">{Title}</div>{/block:Title}
-                    <div class="chat">
-                        <div class="lines">
-                            {block:Lines}
-                            <div class="line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</div>
-                            {/block:Lines}
+                    <div class="post">
+                        <div class="post-album">
+                            <iframe src="images/chadschulz/post-album-sample.jpg" height="500" width="500">
+                                <html>
+                                <head></head>
+                                <body style="margin:0;overflow:hidden">
+                                    <img src="images/chadschulz/post-album-sample.jpg" alt="" height="500" width="500" />
+                                </body>
+                                </html>
+                            </iframe>
+                            <img class="record" src="images/chadschulz/post-album.png" alt="" />
                         </div>
-                    </div>
-                    <div class="clear"></div>
-                    <div style="height:10px;"></div>
-                    {/block:Chat}
 
-                    {block:Link}
-                    <div class="link"><a href="{URL}" {Target}>{Name} &raquo;</a></div>
-                    {block:Description}<div class="copy">{Description}</div>{/block:Description}
-                    {/block:Link}
-
-                    <div class="footer footer-tags {block:ContentSource}with_source_url{/block:ContentSource}" style="
-                    display:none;
-                    {block:IfShowTags}{block:HasTags}display:block;{/block:HasTags}{/block:IfShowTags}
-                    {block:ContentSource}display:block;{/block:ContentSource}
-                    ">
-                        {block:IfShowTags}
-                        {block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
-                        {/block:IfShowTags}
-
-                        {block:ContentSource}
-                        <a href="{SourceURL}" class="source_url">
-                            {lang:Source}:
-                            {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
-                            {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
-                        </a>
-                        {/block:ContentSource}
-                    </div>
-
-                    {block:Date}
-                    <a href="{Permalink}" class="footer-posted">
-                        <div class="footer for_permalink">
-                            <div class="date">
-                                {block:Reblog}
-                                {lang:Reblogged TimeAgo from ReblogParentName} {block:RebloggedFromReblog}(<span style="text-transform:lowercase;">{lang:Originally from ReblogRootName}</span>){/block:RebloggedFromReblog}
-                                {/block:Reblog}
-
-                                {block:NotReblog}
-                                {lang:Posted TimeAgo from source}
-                                {/block:NotReblog}
+                        <div class="footer">
+                            <div class="footer-tags">
+                                <a href="http://chadschulz.com/tagged/SoundCloud">#SoundCloud</a>
+                                <a href="http://chadschulz.com/tagged/16-Bit-Lolitas">#16 Bit Lolitas</a>
+                                <a href="http://chadschulz.com/tagged/Deep-House">#Deep House</a>
+                                <a href="http://chadschulz.com/tagged/Progressive-House">#Progressive House</a>
+                                <a href="http://chadschulz.com/tagged/anjunadeep">#anjunadeep</a>
+                                <a href="http://chadschulz.com/tagged/anjunabeats">#anjunabeats</a>
                             </div>
-                            <div class="notes">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} {block:IfDisqusShortname}{block:NoteCount}&bull;{/block:NoteCount} <a href="{Permalink}#disqus_thread">{lang:View comments}</a>{/block:IfDisqusShortname}</div>
+                            <a href="http://soundcloud.com/16bitlolitas/beat-organ-original-mix" class="footer-source">
+                                Source: SoundCloud / 16 Bit Lolitas
+                            </a>
+                            <a href="http://chadschulz.com/post/106620051727" class="footer-posted">
+                                Posted 5 days ago from bookmarklet
+                            </a>
                         </div>
-                    </a>
-                    {/block:Date}
+                    </div>
 
-                {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+                    <h4>Quote Post</h4>
 
-                {block:IfDisqusShortname}
-                {block:Permalink}
-                <div class="notecontainer" style="margin:20px 0 1px 0; padding:1px 10px 10px 10px;">
-                    <div id="disqus_thread"></div>
-                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                    <div class="post">
+                        <div class="quote {Length}">And I quote! This is a quote.</div>
+                        <div class="copy">
+                            <div class="quotebg">“</div>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="top" style="width:20px;">&mdash;</td>
+                                    <td valign="top" class="quote_source">
+                                        {Source}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h4>Text Post</h4>
+
+                    <div class="post">
+                        <div class="title">Text Title</div>
+                        <div class="copy">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id scelerisque ex. Sed scelerisque pellentesque nisl quis vulputate. Sed vitae porta massa, sed accumsan est. Curabitur condimentum auctor nulla et rhoncus.</p>
+                            <p>Suspendisse potenti. Cras blandit ante ut imperdiet finibus. Vivamus accumsan ultricies diam, vel porttitor nibh maximus ut. Phasellus id tincidunt lacus.</p>
+                        </div>
+                        <div class="footer">
+                            <a href="http://chadschulz.com/post/54838520035/we-made-it" class="footer-posted">
+                                Posted 1 year ago
+                            </a>
+                            <div class="notes"> </div>
+                        </div>
+                    </div>
+
+
+                    {block:Posts}
+                    <div class="post">
+                        {block:Answer}
+                        <div class="question">
+                            <div class="nipple"></div>
+                            {Question}
+                        </div>
+                        <div class="asker_container"><img src="{AskerPortraitURL-24}">{Asker}</div>
+                        <div class="copy">{Answer}</div>
+                        {/block:Answer}
+
+                        {block:Chat}
+                        {block:Title}<div class="title">{Title}</div>{/block:Title}
+                        <div class="chat">
+                            <div class="lines">
+                                {block:Lines}
+                                <div class="line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</div>
+                                {/block:Lines}
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div style="height:10px;"></div>
+                        {/block:Chat}
+
+                        {block:Link}
+                        <div class="link"><a href="{URL}" {Target}>{Name} &raquo;</a></div>
+                        {block:Description}<div class="copy">{Description}</div>{/block:Description}
+                        {/block:Link}
+
+                        <div class="footer">
+                            {block:IfShowTags}
+                            {block:HasTags}
+                            <div class="footer-tags">
+                                {block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}
+                            </div>
+                            {/block:HasTags}
+                            {/block:IfShowTags}
+
+                            {block:ContentSource}
+                            <a href="{SourceURL}" class="footer-source">
+                                {lang:Source}:
+                                {block:SourceLogo}
+                                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                {/block:SourceLogo}
+                                {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                            </a>
+                            {/block:ContentSource}
+                        </div>
+
+                        {block:Date}
+                        <a href="{Permalink}" class="footer-posted">
+                            <div class="footer for_permalink">
+                                <div class="date">
+                                    {block:Reblog}
+                                    {lang:Reblogged TimeAgo from ReblogParentName} {block:RebloggedFromReblog}(<span style="text-transform:lowercase;">{lang:Originally from ReblogRootName}</span>){/block:RebloggedFromReblog}
+                                    {/block:Reblog}
+
+                                    {block:NotReblog}
+                                    {lang:Posted TimeAgo from source}
+                                    {/block:NotReblog}
+                                </div>
+                                <div class="notes">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} {block:IfDisqusShortname}{block:NoteCount}&bull;{/block:NoteCount} <a href="{Permalink}#disqus_thread">{lang:View comments}</a>{/block:IfDisqusShortname}</div>
+                            </div>
+                        </a>
+                        {/block:Date}
+
+                        {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+
+                        {block:IfDisqusShortname}
+                        {block:Permalink}
+                        <div class="notecontainer" style="margin:20px 0 1px 0; padding:1px 10px 10px 10px;">
+                            <div id="disqus_thread"></div>
+                            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                        </div>
+                        <div style="text-align:right; margin-top:5px;">
+                            {lang:Blog comments powered by Disqus 2}
+                        </div>
+                        {/block:Permalink}
+                        {/block:IfDisqusShortname}
+
+                    </div>
+                    <div class="bottom"></div>
+                    {/block:Posts}
                 </div>
-                <div style="text-align:right; margin-top:5px;">
-                    {lang:Blog comments powered by Disqus 2}
+            </section>
+        </div>
+
+
+        <div id="wrapper">
+
+            <div id="content">
+                {block:Pagination}
+                <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
+                    {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
+
+                    {block:IfEnableJumpPagination}
+                    {block:JumpPagination length="5"}
+                    {block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                    {/block:CurrentPage}
+
+                    {block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                    {/block:JumpPage}
+
+                    {/block:JumpPagination}
+                    {/block:IfEnableJumpPagination}
+
+                    {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
                 </div>
-                {/block:Permalink}
-                {/block:IfDisqusShortname}
+                {/block:Pagination}
 
             </div>
-            <div class="bottom"></div>
-            {/block:Posts}
+
+            <div id="sidebar">
+                <div id="top">
+                    <div id="pages" class="ask_and_submit">
+                        {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
+                        {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
+                        <div class="clear"></div>
+                    </div>
+
+                    {block:HasPages}
+                    <div id="pages">
+                        {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
+                        <div class="clear"></div>
+                    </div>
+                    {/block:HasPages}
+
+                    {block:Twitter}
+                    <div id="twitterwrapper" style="display:none;">
+                        <a href="http://twitter.com/{TwitterUsername}" style="text-decoration:none;"><div class="heading" id="twitter">{lang:Latest Tweets}</div></a>
+                        <div id="tweetcontainer"></div>
+                        <script type="text/javascript">
+                        function recent_tweets(data) {
+                            document.getElementById("twitterwrapper").style.display = "block";
+                            for(i = 0; i < data.length; i++) {
+                                document.getElementById("tweetcontainer").innerHTML = document.getElementById("tweetcontainer").innerHTML + '<a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '"><div class="content">' + data[i].text + '</div></a>';
+                            }
+                        }
+                        </script>
+                    </div>
+                    {/block:Twitter}
+                </div>
+            </div>
+
+            <div class="clear"></div>
         </div>
-    </section>
-</div>
 
+        {block:Twitter}
+        <script type="text/javascript" src="/tweets.js"></script>
+        {/block:Twitter}
 
-<div id="wrapper">
-
-    <div id="content">
-        {block:Pagination}
-        <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
-            {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
-
-            {block:IfEnableJumpPagination}
-            {block:JumpPagination length="5"}
-            {block:CurrentPage}
-            <span class="current_page">{PageNumber}</span>
-            {/block:CurrentPage}
-
-            {block:JumpPage}
-            <a class="jump_page" href="{URL}">{PageNumber}</a>
-            {/block:JumpPage}
-
-            {/block:JumpPagination}
-            {/block:IfEnableJumpPagination}
-
-            {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
-        </div>
-        {/block:Pagination}
-
-    </div>
-
-    <div id="sidebar">
-        <div id="top">
-            <div id="pages" class="ask_and_submit">
-                {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
-                {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                <div class="clear"></div>
-            </div>
-
-            {block:HasPages}
-            <div id="pages">
-                {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
-                <div class="clear"></div>
-            </div>
-            {/block:HasPages}
-
-            {block:Twitter}
-            <div id="twitterwrapper" style="display:none;">
-                <a href="http://twitter.com/{TwitterUsername}" style="text-decoration:none;"><div class="heading" id="twitter">{lang:Latest Tweets}</div></a>
-                <div id="tweetcontainer"></div>
-                <script type="text/javascript">
-                function recent_tweets(data) {
-                    document.getElementById("twitterwrapper").style.display = "block";
-                    for(i = 0; i < data.length; i++) {
-                        document.getElementById("tweetcontainer").innerHTML = document.getElementById("tweetcontainer").innerHTML + '<a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '"><div class="content">' + data[i].text + '</div></a>';
-                    }
-                }
-                </script>
-            </div>
-            {/block:Twitter}
-        </div>
-    </div>
-
-    <div class="clear"></div>
-</div>
-
-{block:Twitter}
-<script type="text/javascript" src="/tweets.js"></script>
-{/block:Twitter}
-
-{block:IfDisqusShortname}
-<script type="text/javascript">
+        {block:IfDisqusShortname}
+        <script type="text/javascript">
             //<![CDATA[
             (function() {
                 var links = document.getElementsByTagName('a');

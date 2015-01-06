@@ -1,0 +1,61 @@
+@import "../_definition/mixin.d.less";
+
+/**
+ * Post
+ * Overarching post styling
+ */
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding: 15px;
+
+    .title {
+        font-size: 24px;
+    }
+
+    .copy {
+        border-bottom: 1px solid #eee;
+    }
+
+    .footer {
+        padding-top: 15px;
+        .group();
+    }
+
+    .footer-tags {
+        float: right;
+        max-width: 50%;
+
+        a {
+            display: inline-block;
+            color: #888;
+            font-size: 11px;
+            text-decoration: none;
+            text-transform: uppercase;
+            float: right;
+            margin: 0 0 4px 8px;
+        }
+
+        .tags  {
+            & > a {
+                display: inline-block;
+                margin-left: 6px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .footer-source,
+    .footer-posted {
+        color: #888;
+        font-size: 11px;
+        max-width: 50%;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
