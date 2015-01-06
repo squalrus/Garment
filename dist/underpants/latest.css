@@ -213,19 +213,18 @@ code {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.4em;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  display: block;
   margin: 0;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #eaeaea;
-  border: 1px solid #999999;
-  display: inline-block;
-  margin: 0 .4em;
   padding: 0 .4em;
   vertical-align: middle;
 }
 code pre {
   display: block;
+}
+p code {
+  display: inline-block;
 }
 em {
   font-style: italic;

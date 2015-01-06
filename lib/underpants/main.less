@@ -61,16 +61,19 @@ ul, ol {
 
 code {
     .font-console(12px);
-    .rounded-corners(4px);
-    background-color: @Color_Slate_02;
-    border: 1px solid @Color_Slate_03;
-    display: inline-block;
-    margin: 0 .4em;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    display: block;
+    margin: 0;
     padding: 0 .4em;
     vertical-align: middle;
 
     & pre {
         display: block;
+    }
+
+    p & {
+        display: inline-block;
     }
 }
 
