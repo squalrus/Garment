@@ -5,6 +5,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON("package.json"),
 
         chadschulz: [
+            "lib/cs/main.less",
             "lib/cs/sections.less",
             "lib/cs/layout.less",
             "lib/cs/navigation.less",

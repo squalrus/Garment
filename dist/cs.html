@@ -48,240 +48,71 @@
                 <h4>Audio Post</h4>
                 <p>Currently supported: SoundCloud
 
-                    <div class="post">
-                        <div class="post-album">
-                            <iframe src="images/chadschulz/post-album-sample.jpg" height="500" width="500">
-                                <html>
-                                <head></head>
-                                <body style="margin:0;overflow:hidden">
-                                    <img src="images/chadschulz/post-album-sample.jpg" alt="" height="500" width="500" />
-                                </body>
-                                </html>
-                            </iframe>
-                            <img class="record" src="images/chadschulz/post-album.png" alt="" />
-                        </div>
-
-                        <div class="footer">
-                            <div class="footer-tags">
-                                <a href="http://chadschulz.com/tagged/SoundCloud">#SoundCloud</a>
-                                <a href="http://chadschulz.com/tagged/16-Bit-Lolitas">#16 Bit Lolitas</a>
-                                <a href="http://chadschulz.com/tagged/Deep-House">#Deep House</a>
-                                <a href="http://chadschulz.com/tagged/Progressive-House">#Progressive House</a>
-                                <a href="http://chadschulz.com/tagged/anjunadeep">#anjunadeep</a>
-                                <a href="http://chadschulz.com/tagged/anjunabeats">#anjunabeats</a>
-                            </div>
-                            <a href="http://soundcloud.com/16bitlolitas/beat-organ-original-mix" class="footer-source">
-                                Source: SoundCloud / 16 Bit Lolitas
-                            </a>
-                            <a href="http://chadschulz.com/post/106620051727" class="footer-posted">
-                                Posted 5 days ago from bookmarklet
-                            </a>
-                        </div>
+                <div class="post">
+                    <div class="post-album">
+                        <iframe src="images/chadschulz/post-album-sample.jpg" height="500" width="500">
+                            <html>
+                            <head></head>
+                            <body style="margin:0;overflow:hidden">
+                                <img src="images/chadschulz/post-album-sample.jpg" alt="" height="500" width="500" />
+                            </body>
+                            </html>
+                        </iframe>
+                        <img class="record" src="images/chadschulz/post-album.png" alt="" />
                     </div>
 
-                    <h4>Quote Post</h4>
-
-                    <div class="post">
-                        <div class="quote {Length}">And I quote! This is a quote.</div>
-                        <div class="copy">
-                            <div class="quotebg">“</div>
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td valign="top" style="width:20px;">&mdash;</td>
-                                    <td valign="top" class="quote_source">
-                                        {Source}
-                                    </td>
-                                </tr>
-                            </table>
+                    <div class="footer">
+                        <div class="footer-tags">
+                            <a href="http://chadschulz.com/tagged/SoundCloud">#SoundCloud</a>
+                            <a href="http://chadschulz.com/tagged/16-Bit-Lolitas">#16 Bit Lolitas</a>
+                            <a href="http://chadschulz.com/tagged/Deep-House">#Deep House</a>
+                            <a href="http://chadschulz.com/tagged/Progressive-House">#Progressive House</a>
+                            <a href="http://chadschulz.com/tagged/anjunadeep">#anjunadeep</a>
+                            <a href="http://chadschulz.com/tagged/anjunabeats">#anjunabeats</a>
                         </div>
-                    </div>
-
-                    <h4>Text Post</h4>
-
-                    <div class="post">
-                        <div class="title">Text Title</div>
-                        <div class="copy">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id scelerisque ex. Sed scelerisque pellentesque nisl quis vulputate. Sed vitae porta massa, sed accumsan est. Curabitur condimentum auctor nulla et rhoncus.</p>
-                            <p>Suspendisse potenti. Cras blandit ante ut imperdiet finibus. Vivamus accumsan ultricies diam, vel porttitor nibh maximus ut. Phasellus id tincidunt lacus.</p>
-                        </div>
-                        <div class="footer">
-                            <a href="http://chadschulz.com/post/54838520035/we-made-it" class="footer-posted">
-                                Posted 1 year ago
-                            </a>
-                            <div class="notes"> </div>
-                        </div>
-                    </div>
-
-
-                    {block:Posts}
-                    <div class="post">
-                        {block:Answer}
-                        <div class="question">
-                            <div class="nipple"></div>
-                            {Question}
-                        </div>
-                        <div class="asker_container"><img src="{AskerPortraitURL-24}">{Asker}</div>
-                        <div class="copy">{Answer}</div>
-                        {/block:Answer}
-
-                        {block:Chat}
-                        {block:Title}<div class="title">{Title}</div>{/block:Title}
-                        <div class="chat">
-                            <div class="lines">
-                                {block:Lines}
-                                <div class="line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</div>
-                                {/block:Lines}
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div style="height:10px;"></div>
-                        {/block:Chat}
-
-                        {block:Link}
-                        <div class="link"><a href="{URL}" {Target}>{Name} &raquo;</a></div>
-                        {block:Description}<div class="copy">{Description}</div>{/block:Description}
-                        {/block:Link}
-
-                        <div class="footer">
-                            {block:IfShowTags}
-                            {block:HasTags}
-                            <div class="footer-tags">
-                                {block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}
-                            </div>
-                            {/block:HasTags}
-                            {/block:IfShowTags}
-
-                            {block:ContentSource}
-                            <a href="{SourceURL}" class="footer-source">
-                                {lang:Source}:
-                                {block:SourceLogo}
-                                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                {/block:SourceLogo}
-                                {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
-                            </a>
-                            {/block:ContentSource}
-                        </div>
-
-                        {block:Date}
-                        <a href="{Permalink}" class="footer-posted">
-                            <div class="footer for_permalink">
-                                <div class="date">
-                                    {block:Reblog}
-                                    {lang:Reblogged TimeAgo from ReblogParentName} {block:RebloggedFromReblog}(<span style="text-transform:lowercase;">{lang:Originally from ReblogRootName}</span>){/block:RebloggedFromReblog}
-                                    {/block:Reblog}
-
-                                    {block:NotReblog}
-                                    {lang:Posted TimeAgo from source}
-                                    {/block:NotReblog}
-                                </div>
-                                <div class="notes">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} {block:IfDisqusShortname}{block:NoteCount}&bull;{/block:NoteCount} <a href="{Permalink}#disqus_thread">{lang:View comments}</a>{/block:IfDisqusShortname}</div>
-                            </div>
+                        <a href="http://soundcloud.com/16bitlolitas/beat-organ-original-mix" class="footer-source">
+                            Source: SoundCloud / 16 Bit Lolitas
                         </a>
-                        {/block:Date}
-
-                        {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
-
-                        {block:IfDisqusShortname}
-                        {block:Permalink}
-                        <div class="notecontainer" style="margin:20px 0 1px 0; padding:1px 10px 10px 10px;">
-                            <div id="disqus_thread"></div>
-                            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
-                        </div>
-                        <div style="text-align:right; margin-top:5px;">
-                            {lang:Blog comments powered by Disqus 2}
-                        </div>
-                        {/block:Permalink}
-                        {/block:IfDisqusShortname}
-
+                        <a href="http://chadschulz.com/post/106620051727" class="footer-posted">
+                            Posted 5 days ago from bookmarklet
+                        </a>
                     </div>
-                    <div class="bottom"></div>
-                    {/block:Posts}
                 </div>
-            </section>
-        </div>
 
+                <h4>Quote Post</h4>
 
-        <div id="wrapper">
-
-            <div id="content">
-                {block:Pagination}
-                <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
-                    {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
-
-                    {block:IfEnableJumpPagination}
-                    {block:JumpPagination length="5"}
-                    {block:CurrentPage}
-                    <span class="current_page">{PageNumber}</span>
-                    {/block:CurrentPage}
-
-                    {block:JumpPage}
-                    <a class="jump_page" href="{URL}">{PageNumber}</a>
-                    {/block:JumpPage}
-
-                    {/block:JumpPagination}
-                    {/block:IfEnableJumpPagination}
-
-                    {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
+                <div class="post">
+                    <div class="quote {Length}">And I quote! This is a quote.</div>
+                    <div class="copy">
+                        <div class="quotebg">“</div>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" style="width:20px;">&mdash;</td>
+                                <td valign="top" class="quote_source">
+                                    {Source}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-                {/block:Pagination}
 
-            </div>
+                <h4>Text Post</h4>
 
-            <div id="sidebar">
-                <div id="top">
-                    <div id="pages" class="ask_and_submit">
-                        {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
-                        {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                        <div class="clear"></div>
+                <div class="post">
+                    <div class="title">Text Title</div>
+                    <div class="copy">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id scelerisque ex. Sed scelerisque pellentesque nisl quis vulputate. Sed vitae porta massa, sed accumsan est. Curabitur condimentum auctor nulla et rhoncus.</p>
+                        <p>Suspendisse potenti. Cras blandit ante ut imperdiet finibus. Vivamus accumsan ultricies diam, vel porttitor nibh maximus ut. Phasellus id tincidunt lacus.</p>
                     </div>
-
-                    {block:HasPages}
-                    <div id="pages">
-                        {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
-                        <div class="clear"></div>
+                    <div class="footer">
+                        <a href="http://chadschulz.com/post/54838520035/we-made-it" class="footer-posted">
+                            Posted 1 year ago
+                        </a>
+                        <div class="notes"> </div>
                     </div>
-                    {/block:HasPages}
-
-                    {block:Twitter}
-                    <div id="twitterwrapper" style="display:none;">
-                        <a href="http://twitter.com/{TwitterUsername}" style="text-decoration:none;"><div class="heading" id="twitter">{lang:Latest Tweets}</div></a>
-                        <div id="tweetcontainer"></div>
-                        <script type="text/javascript">
-                        function recent_tweets(data) {
-                            document.getElementById("twitterwrapper").style.display = "block";
-                            for(i = 0; i < data.length; i++) {
-                                document.getElementById("tweetcontainer").innerHTML = document.getElementById("tweetcontainer").innerHTML + '<a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '"><div class="content">' + data[i].text + '</div></a>';
-                            }
-                        }
-                        </script>
-                    </div>
-                    {/block:Twitter}
                 </div>
             </div>
-
-            <div class="clear"></div>
-        </div>
-
-        {block:Twitter}
-        <script type="text/javascript" src="/tweets.js"></script>
-        {/block:Twitter}
-
-        {block:IfDisqusShortname}
-        <script type="text/javascript">
-            //<![CDATA[
-            (function() {
-                var links = document.getElementsByTagName('a');
-                var query = '?';
-                for(var i = 0; i < links.length; i++) {
-                    if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-                    }
-                }
-                document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-            })();
-            //]]>
-            </script>
-            {/block:IfDisqusShortname}
-        </body>
-        </html>
+        </section>
+    </div>
+</body>
+</html>

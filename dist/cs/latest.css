@@ -1,3 +1,15 @@
+body {
+  position: relative;
+}
+a {
+  color: #888;
+  text-decoration: underline;
+}
+a:hover {
+  color: #BBB;
+  text-decoration: none;
+}
+
 /**
  * Header overrides
  */
@@ -69,7 +81,6 @@ nav .nav-logo {
 }
 .post .footer-tags a {
   display: inline-block;
-  color: #888;
   font-size: 11px;
   text-decoration: none;
   text-transform: uppercase;
@@ -85,7 +96,6 @@ nav .nav-logo {
 }
 .post .footer-source,
 .post .footer-posted {
-  color: #888;
   font-size: 11px;
   max-width: 50%;
   text-decoration: none;
