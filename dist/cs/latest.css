@@ -37,14 +37,33 @@ section {
  * Content overrides
  */
 .gmt-content {
+  width: 800px;
+}
+.gmt-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/**
+ * Posts
+ */
+.gmt-posts {
+  float: left;
   width: 500px;
+}
+/**
+ * Sidebar
+ */
+.gmt-sidebar {
+  float: right;
+  width: 280px;
 }
 
 /**
  * Navigation overrides
  */
 nav {
-  width: 500px;
+  width: 800px;
 }
 nav .nav-logo {
   margin: -5px 6px -5px 0;
@@ -60,6 +79,10 @@ nav .nav-logo {
   border: 1px solid #ddd;
   margin-bottom: 30px;
   padding: 15px;
+}
+.post .hero {
+  margin: -15px -15px 15px;
+  width: 498px;
 }
 .post .title {
   font-size: 24px;
