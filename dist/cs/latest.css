@@ -58,6 +58,13 @@ section {
   float: right;
   width: 280px;
 }
+.gmt-sidebar ul {
+  margin-bottom: 14px;
+  padding-left: 0;
+}
+.gmt-sidebar ul li {
+  margin: 6px 0;
+}
 
 /**
  * Navigation overrides
@@ -158,5 +165,15 @@ nav .nav-logo {
   margin: -15px -15px 0 -15px;
 }
 .post-photo img {
+  width: 498px;
+}
+
+/**
+ * Video Post
+ */
+.post-video {
+  margin: -15px -15px 0 -15px;
+}
+.post-video iframe {
   width: 498px;
 }

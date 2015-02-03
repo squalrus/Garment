@@ -11,7 +11,8 @@ module.exports = function (grunt) {
             "lib/cs/navigation.less",
             "lib/cs/post.less",
             "lib/cs/post-album.less",
-            "lib/cs/post-photo.less"
+            "lib/cs/post-photo.less",
+            "lib/cs/post-video.less"
         ],
 
         underpants: [
